@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+.logo {
+  font-family: "Bebas Neue", sans-serif;
+}
+@theme {
+  --color-purple: #6941c6;
+  --color-brand: #6941c6;
+  --color-brand-strong: #5a35b3;
+  --color-brand-medium: #8b5cf6;
+  --breakpoint-2xl: 87.5rem;
+  --radius-base: 0.5rem;
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+@layer utilities {
+  .container {
+    margin-inline: auto;
+  }
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.17em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  h5 {
+    font-size: 0.67em;
+  }
+  h6 {
+    font-size: 0.67em;
+  }
+}
