@@ -90,14 +90,14 @@ export default function AddPost() {
               accept="image/*,video/*"
               onChange={handleFileChange}
             />
+          </div>
+          <div className="flex justify-end items-center gap-3">
             <label
               htmlFor="fileInput"
               className="cursor-pointer text-purple-500 hover:text-purple-600 transition"
             >
-              <i className="fa-solid fa-photo-film text-lg md:text-2xl"></i>
+              <i className="fa-solid fa-photo-film text-2xl"></i>
             </label>
-          </div>
-          <div className="flex justify-end">
             <button
               type="submit"
               className="text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 my-3 transition-all duration-200"
