@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { loginFn } from "../Api/login.api";
@@ -10,7 +10,19 @@ export default function Login() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const { setLogin } = useContext(auth);
+  const { setLogin, isLogin } = useContext(auth);
+
+  useEffect(() => {
+    if (isLogin || localStorage.getItem("token")) {
+      navigate("/home", { replace: true });
+    }
+  }, [isLogin, navigate]);
+
+  useEffect(() => {
+    if (isLogin) {
+      navigate("/home");
+    }
+  }, [isLogin, navigate]);
 
   const { register, handleSubmit } = useForm({
     resolver: zodResolver(loginScheme),
