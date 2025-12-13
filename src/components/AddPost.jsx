@@ -94,7 +94,7 @@ export default function AddPost() {
               htmlFor="fileInput"
               className="cursor-pointer text-purple-500 hover:text-purple-600 transition"
             >
-              <i className="fa-solid fa-photo-film text-3xl"></i>
+              <i className="fa-solid fa-photo-film text-lg md:text-2xl"></i>
             </label>
           </div>
           <div className="flex justify-end">
