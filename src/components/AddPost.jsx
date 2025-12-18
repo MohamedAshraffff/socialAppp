@@ -78,16 +78,15 @@ export default function AddPost() {
               type="text"
               onChange={(e) => setBody(e.target.value)}
               value={body}
-              placeholder={`What's on your mind, ${
-                userData?.user?.name?.split(" ")[0] || "User"
-              }?`}
+              placeholder={`What's on your mind, ${userData?.user?.name?.split(" ")[0] || "User"
+                }?`}
               className="flex-1 bg-gray-100 dark:bg-gray-800 text-black dark:text-gray-100 rounded-full px-6 py-3 outline-none focus:bg-gray-200 dark:focus:bg-gray-700 transition placeholder:text-gray-500 dark:placeholder:text-gray-400"
             />
             <input
               type="file"
               id="fileInput"
               className="hidden"
-              accept="image/*,video/*"
+              accept=".png, .jpg, .jpeg, .gif, .webp, .mp4, .mov"
               onChange={handleFileChange}
             />
             <label
